@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trevor Overton | Portfolio</title>
+    <style>
+        /* General page styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f7f6;
+            color: #2b2b2b;
+        }
+
+        /* The main layout card */
+        .container {
+            display: flex;
+            max-width: 4000px; /* Widened slightly to give the square image more room */
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            width: 90%;
+        }
+
+        /* Left side styling */
+        .left-panel {
+            flex: 1; /* Takes up 1 fraction of the space */
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .headshot {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 24px;
+            border: 3px solid #0056b3; 
+        }
+
+        h1 {
+            margin: 0 0 8px 0;
+            font-size: 2.5em;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            margin: 0 0 10px 0;
+            color: #6c757d;
+            font-size: 1.1em;
+        }
+
+        .location {
+            margin: 0 0 50px 0;
+            color: #6c757d;
+            font-size: 1.05em;
+            font-style: italic;
+            font-family: 'Georgia';
+        }
+
+        /* Link styling */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: #0056b3;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: color 0.2s ease, transform 0.2s ease;
+            width: fit-content;
+        }
+
+        .links a:hover {
+            color: #003d82;
+            transform: translateX(5px);
+        }
+
+        /* Right side styling */
+        .right-panel {
+            flex: 1.4; /* Takes up more space than the left side */
+            background-color: #e9ecef;
+        }
+
+        .main-photo {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 1 / 1; /* Forces the image to remain perfectly square */
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column-reverse; /* Puts the main photo on top for mobile */
+            }
+            .left-panel {
+                padding: 40px;
+                align-items: center;
+                text-align: center;
+            }
+            .links {
+                align-items: center;
+            }
+            .links a:hover {
+                transform: translateY(-3px); /* Changes hover effect for centered text */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left-panel">
+            <img src="headshot.jpg" alt="Trevor Overton Headshot" class="headshot">
+            
+            <h1>Trevor Overton</h1>
+            <p class="subtitle">Neuroengineering Student</p>
+            <p class="location">University of Central Florida, Orlando, FL</p>
+            
+            <div class="links">
+                <a href="https://www.linkedin.com/in/trevordoverton/" target="_blank">LinkedIn</a>
+                <a href="https://scholar.google.com/citations?user=yRcheb8AAAAJ" target="_blank">Google Scholar</a>
+                <a href="https://orcid.org/0009-0008-3134-6617" target="_blank">ORCID</a>
+                <a href="https://github.com/TrevorOverton" target="_blank">GitHub</a>
+                <a href="resume.pdf" target="_blank">Resume</a>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <img src="main-photo-crop-2.jpg" alt="Trevor Overton controlling a robotic dog" class="main-photo">
+        </div>
+    </div>
+
+</body>
+</html>
